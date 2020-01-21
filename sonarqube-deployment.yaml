@@ -33,12 +33,12 @@ spec:
             #value: "jdbc:postgresql://POSTGRESS_IP:5432/sonar"
             valueFrom:
               secretKeyRef:
-                name: credentials1
+                name: postgres-sonar
                 key: sonarqube_jdbs_url
           - name: "SONARQUBE_JDBC_PASSWORD"
             valueFrom:
               secretKeyRef:
-                name: credentials1
+                name: postgres-sonar
                 key: password
           ports:
           - containerPort: 9000
